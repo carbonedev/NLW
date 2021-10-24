@@ -41,17 +41,17 @@
 
                 </span>
 
-                <img src="https://lorempixel.com/185/185/people/" alt="Foto Pessoal">
+                <img id = "userImage" src="" alt="Foto Pessoal">
 
             </div>
             
-            <h1 id="userName">Denis Carbone</h1>
-            <a href="" target="_blank">
+            <h1 id="userName"></h1>
+            <a id="userLink" href="" target="_blank">
                 <img src="images/github.svg" alt="ícone github">
-                deniscarbone</a
-            >
+                <span id="userLogin"></span>
+                </a>
             
-            <p>A student focusded on get the maximum content possible</p>
+            <p id="userBio"></p>
 
             <ul id="socialLinks">
                 <li class="youtube">
@@ -82,37 +82,7 @@
 
     </main>
 
-    <script>
-
-        const linksSocialMedia = {
-
-             github: "carbonedev",
-             youtube: "channel/UCchIgKQIXGx2iYWg-qW5mUQ",
-             facebook: "",
-             instagram: "",
-             twitter:""
-
-        }
-
-
-        function changeSocialMedia(){
-           
-           for (let li of socialLinks.children){
-               const social = li.getAttribute('class');
-
-               li.children[0].href = `https://${social}.com/${linksSocialMedia[social]}`
-               
-               
-               alert(li.children[0].href);
-               
-
-           }
-
-        }
-
-
-        changeSocialMedia()
-    </script>
+    <script src="main.js"></script>
 
 </body>
 </html>
